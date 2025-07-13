@@ -1,1 +1,259 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChromeDevStack Projects</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Marked.js CDN for Markdown parsing (if still needed for post details) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-purple-600 via-indigo-700 to-blue-800 z-50">
+        <div class="loading-container text-white flex flex-col items-center">
+            <div class="loading-x-container relative w-32 h-32 mb-8">
+                <div class="line line-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
+                <div class="line line-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-45"></div>
+            </div>
+            <p class="loading-text text-2xl font-semibold opacity-0 transition-opacity duration-500">Loading Awesomeness...</p>
+        </div>
+    </div>
+
+    <!-- Donation/Access Screen -->
+    <div id="donation-screen" class="hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-100 z-40 p-4">
+        <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl text-center max-w-lg w-full transform transition-all duration-500 scale-95 opacity-0">
+            <h2 class="text-4xl font-extrabold text-indigo-700 mb-6">Access ChromeDevStack Projects</h2>
+            <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                Support my work with a donation, or access the site for free!
+            </p>
+
+            <div class="flex flex-wrap justify-center items-center gap-6 mb-10">
+                <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal Accepted" class="h-12 rounded-md shadow-sm">
+                <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_74x46.jpg" alt="PayPal Secure" class="h-12 rounded-md shadow-sm">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- $5 Donation Button (Simulated) -->
+                <button class="access-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="5">
+                    Donate $5
+                </button>
+
+                <!-- $10 Donation Button (Simulated) -->
+                <button class="access-button bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="10">
+                    Donate $10
+                </button>
+
+                <!-- $15 Donation Button (Simulated) -->
+                <button class="access-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="15">
+                    Donate $15
+                </button>
+            </div>
+
+            <!-- Free Access Button -->
+            <button id="free-access-button" class="access-button bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out mt-6 w-full md:w-auto">
+                Free Access
+            </button>
+
+            <p class="text-sm text-gray-500 mt-8">
+                *Note: Donation buttons are simulated for demonstration. Clicking any button will grant immediate access to the site content.
+            </p>
+        </div>
+    </div>
+
+    <!-- Main Content Area (Blog) - Initially hidden -->
+    <div id="main-content" class="hidden opacity-0 transition-opacity duration-500 min-h-screen bg-gray-100 text-gray-800">
+        <header class="bg-indigo-700 text-white p-6 shadow-lg">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-4xl font-extrabold">ChromeDevStack Projexts</h1>
+                <a href="https://github.com/your-username" target="_blank" class="text-white hover:text-indigo-200 transition duration-300">
+                    Visit GitHub
+                </a>
+            </div>
+        </header>
+
+        <!-- Featured Projects Section -->
+        <section class="container mx-auto mt-12 p-6 md:p-8">
+            <h2 class="text-4xl font-extrabold text-indigo-800 mb-10 text-center">Featured Projects</h2>
+            <div class="grid grid-cols-1 gap-12">
+
+                <!-- Featured Project 1: Serenity Shores Resort -->
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1549749969-90d565617a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEzfHxyZXNvcnQlMjByb29tfGVufDB8fHx8MTcwMTg4MTEyOXww&ixlib=rb-4.0.3&q=80&w=1080" alt="Resort Room" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                                <a href="https://github.com/your-username/serenity-shores" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Serenity Shores Resort Website
+                                </a>
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Designed and developed a responsive, visually stunning website for "Serenity Shores," a luxury beach resort. This project showcases advanced front-end techniques, seamless photo galleries, and an intuitive booking system mock-up. It was built with a focus on delivering an immersive user experience, reflecting the tranquil and luxurious ambiance of the resort.
+                            </p>
+                            <p class="text-md text-gray-600">
+                                **Technologies Used:** HTML5, CSS3 (Tailwind CSS), JavaScript, Swiper.js for carousels, responsive design principles.
+                            </p>
+                            <a href="https://github.com/your-username/serenity-shores" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                                View Project on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 2: AI-Powered Chatbot -->
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1620281691456-a94f6e1f0e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDh8fGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MjE0NDU2ODl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="AI Chatbot Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                                <a href="https://github.com/your-username/ai-chatbot" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Intelligent AI Chatbot Assistant
+                                </a>
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Developed a sophisticated AI-powered chatbot designed to streamline customer support and enhance user interaction. This project integrates natural language processing (NLP) to understand complex queries and provide accurate, context-aware responses. It features a scalable architecture and a robust backend for efficient data handling.
+                            </p>
+                            <p class="text-md text-gray-600">
+                                **Technologies Used:** Python (Flask), TensorFlow/Keras, Natural Language Toolkit (NLTK), PostgreSQL.
+                            </p>
+                            <a href="https://github.com/your-username/ai-chatbot" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                                View Project on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 3: E-commerce Dashboard -->
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6159c996615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDExfHxlY29tbWVyY2UlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzIxNDQ2MDY0fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Dashboard Overview" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                                <a href="https://github.com/your-username/ecommerce-dashboard" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Interactive E-commerce Analytics Dashboard
+                                </a>
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Built a real-time e-commerce analytics dashboard providing key insights into sales, customer behavior, and product performance. This project features interactive charts and graphs, customizable data filters, and a user-friendly interface for quick decision-making.
+                            </p>
+                            <p class="text-md text-gray-600">
+                                **Technologies Used:** React, D3.js, Node.js, Express, MongoDB.
+                            </p>
+                            <a href="https://github.com/your-username/ecommerce-dashboard" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                                View Project on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 4: Mobile Recipe App -->
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1594951939103-125950ee07e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDJ8fG1vYmlsZSUyMHJlY2lwZSUyMGFwcHxlbnwwfHx8fDE3MjE0NDYyOTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Recipe App Screenshot 1" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                                <a href="https://github.com/your-username/mobile-recipe-app" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Cross-Platform Mobile Recipe App
+                                </a>
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Developed a cross-platform mobile application for discovering and managing recipes. Users can search by ingredients, cuisine type, or dietary restrictions, save favorites, and create meal plans. The app features an intuitive UI/UX and offline capabilities.
+                            </p>
+                            <p class="text-md text-gray-600">
+                                **Technologies Used:** React Native, Firebase (Authentication, Firestore), Redux, Expo.
+                            </p>
+                            <a href="https://github.com/your-username/mobile-recipe-app" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                                View Project on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 5: Smart Home Automation -->
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1621295325942-88f6b8b0b8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDR8fHNtYXJ0JTIwaG9tZSUyMGF1dG9tYXRpb258ZW5ufDB8fHx8MTcyMTQ0NjQ2M3ww&ixlib=rb-4.0.3&q=80&w=1080" alt="Smart Home Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                                <a href="https://github.com/your-username/smart-home-automation" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    IoT-Based Smart Home Automation System
+                                </a>
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Developed a prototype smart home automation system using IoT devices and a central hub. Users can control lighting, temperature, and security features remotely via a web interface or mobile app. The system supports integration with various smart sensors.
+                            </p>
+                            <p class="text-md text-gray-600">
+                                **Technologies Used:** Arduino/Raspberry Pi, Python, MQTT, Node-RED, WebSockets.
+                            </p>
+                            <a href="https://github.com/your-username/smart-home-automation" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                                View Project on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project 6: Fitness Tracker App -->
+                <div class="bg-white rounded-lg shadow-xl p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1553775957-3f309a6504a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEyfHxmaXRuZXNzJTIwdHJhY2tlciUyMGFwcHxlbnwwfHx8fDE3MjE0NDY1ODd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Fitness Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                                <a href="https://github.com/your-username/fitness-tracker-app" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Personal Fitness Tracker Application
+                                </a>
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Developed a comprehensive fitness tracking application to help users monitor their workouts, track progress, and set health goals. Features include custom workout routines, calorie tracking, progress visualization, and integration with health APIs.
+                            </p>
+                            <p class="text-md text-gray-600">
+                                **Technologies Used:** Swift (iOS) / Kotlin (Android), CoreData/Room, RESTful APIs, Charts.
+                            </p>
+                            <a href="https://github.com/your-username/fitness-tracker-app" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                                View Project on GitHub &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Featured Projects Section -->
+
+        <!-- Individual Blog Post Detail Section (kept for navigation, though likely won't be used with this structure) -->
+        <section id="post-detail-section" class="hidden bg-white p-8 rounded-lg shadow-xl">
+            <button id="back-to-posts-button" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg mb-6 transition duration-300 ease-in-out">
+                &larr; Back to All Posts
+            </button>
+            <div id="post-detail-content" class="prose max-w-none">
+                <!-- Individual post content will be loaded here by JavaScript -->
+            </div>
+        </section>
+        </main>
+
+        <footer class="bg-gray-800 text-white p-6 text-center mt-12">
+            <p>&copy; 2024 My Project Blog. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
