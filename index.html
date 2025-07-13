@@ -4,34 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChromeDevStack Projects</title>
-    <!-- Tailwind CSS CDN for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Marked.js CDN for Markdown parsing (if still needed for post details) -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="font-inter">
 
-    <!-- Loading Screen -->
     <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-purple-600 via-indigo-700 to-blue-800 z-50">
         <div class="loading-container text-white flex flex-col items-center">
             <div class="loading-x-container relative w-32 h-32 mb-8">
                 <div class="line line-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
                 <div class="line line-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-45"></div>
             </div>
-            <p class="loading-text text-2xl font-semibold opacity-0 transition-opacity duration-500">Loading Awesomeness...</p>
+            <p class="loading-text text-2xl font-semibold opacity-0 transition-opacity duration-500">Loading Dev Stack...</p>
         </div>
     </div>
 
-    <!-- Donation/Access Screen -->
     <div id="donation-screen" class="hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-100 z-40 p-4">
         <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl text-center max-w-lg w-full transform transition-all duration-500 scale-95 opacity-0">
-            <h2 class="text-4xl font-extrabold text-indigo-700 mb-6">Access ChromeDevStack Projects</h2>
+            <h2 class="text-4xl font-extrabold text-indigo-700 mb-6">Access Developer Stack Projects</h2>
             <p class="text-gray-700 text-lg mb-8 leading-relaxed">
-                Support my work with a donation, or access the site for free!
+                Donations are Welcome.
             </p>
 
             <div class="flex flex-wrap justify-center items-center gap-6 mb-10">
@@ -40,193 +34,221 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <!-- $5 Donation Button (Simulated) -->
                 <button class="access-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="5">
                     Donate $5
                 </button>
 
-                <!-- $10 Donation Button (Simulated) -->
                 <button class="access-button bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="10">
                     Donate $10
                 </button>
 
-                <!-- $15 Donation Button (Simulated) -->
                 <button class="access-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="15">
                     Donate $15
                 </button>
             </div>
 
-            <!-- Free Access Button -->
             <button id="free-access-button" class="access-button bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out mt-6 w-full md:w-auto">
                 Free Access
             </button>
 
             <p class="text-sm text-gray-500 mt-8">
-                *Note: Donation buttons are simulated for demonstration. Clicking any button will grant immediate access to the site content.
+                *Note: Donation buttons are simulated for demonstration. Clicking any button will grant immediate access to the site content. (Testing Phase)
             </p>
         </div>
     </div>
 
-    <!-- Main Content Area (Blog) - Initially hidden -->
     <div id="main-content" class="hidden opacity-0 transition-opacity duration-500 min-h-screen bg-gray-100 text-gray-800">
         <header class="bg-indigo-700 text-white p-6 shadow-lg">
             <div class="container mx-auto flex justify-between items-center">
-                <h1 class="text-4xl font-extrabold">ChromeDevStack Projexts</h1>
+                <h1 class="text-4xl font-extrabold">ChromeDevStack Projects</h1>
                 <a href="https://github.com/your-username" target="_blank" class="text-white hover:text-indigo-200 transition duration-300">
                     Visit GitHub
                 </a>
             </div>
         </header>
 
-        <!-- Featured Projects Section -->
-        <section class="container mx-auto mt-12 p-6 md:p-8">
-            <h2 class="text-4xl font-extrabold text-indigo-800 mb-10 text-center">Featured Projects</h2>
+        <main class="container mx-auto mt-12 p-6 md:p-8">
+            <section class="mb-12">
+                <img src="images/desktop_banner.jpg" alt="Developer Desktop Setup" class="w-full h-auto rounded-lg shadow-xl object-cover max-h-96">
+            </section>
+            <section class="bg-white rounded-lg shadow-xl p-8 mb-12">
+                <h2 class="text-4xl font-extrabold text-indigo-800 mb-6 text-center">Featured Post: Mastering SaaS & Open Source for Profit</h2>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p>In today's dynamic digital landscape, Software as a Service (SaaS) and Open Source technologies stand as pillars of innovation and opportunity. This featured post delves into how you can leverage these powerful concepts, not just for personal growth, but to create impactful projects and even generate income in your free time.</p>
+
+                    <h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Understanding SaaS</h3>
+                    <p>SaaS is a software delivery model where software is licensed on a subscription basis and is centrally hosted. Think of tools like Notion, Slack, or Google Workspace. The beauty of SaaS lies in its accessibility (web-based), scalability, and recurring revenue model for creators. By building a SaaS tool, you can provide ongoing value to users and build a sustainable business.</p>
+                    <p>Key aspects of a successful SaaS product include identifying a clear problem to solve, providing a seamless user experience, and continuously iterating based on user feedback. Monetization often comes through tiered subscriptions, usage-based pricing, or premium features.</p>
+
+                    <h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Embracing Open Source</h3>
+                    <p>Open Source software, where the source code is freely available and can be modified and distributed, fosters collaboration and transparency. Projects like Linux, WordPress, and Python are prime examples of the power of open source. Contributing to open source projects enhances your skills, expands your network, and builds your reputation.</p>
+                    <p>But how can you profit from something that's free? The answer lies in various business models that revolve around open source:</p>
+                    <ul class="list-disc list-inside ml-6 mt-4 space-y-2">
+                        <li><strong>Support and Consulting:</strong> Many companies and individuals will pay for expert help to implement, customize, or troubleshoot open source software.</li>
+                        <li><strong>Open Core Model:</strong> Offer a free, open-source core version of your software, and then sell proprietary features, integrations, or enterprise-grade support.</li>
+                        <li><strong>SaaS Offering:</strong> Host and manage an open-source project as a service, charging a subscription for the convenience and additional managed features.</li>
+                        <li><strong>Donations and Sponsorships:</strong> For popular projects, community support through donations or corporate sponsorships can provide a significant revenue stream.</li>
+                        <li><strong>Paid Features/Plugins:</strong> Develop and sell add-ons, themes, or plugins that extend the functionality of an open-source project.</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Utilizing and Monetizing in Your Free Time</h3>
+                    <p>The synergy between SaaS and Open Source is where true opportunity lies for individuals with spare time. You can:</p>
+                    <ul class="list-disc list-inside ml-6 mt-4 space-y-2">
+                        <li><strong>Build a Niche SaaS on Open Source Foundations:</strong> Identify an open-source project that solves a common problem, and then build a hosted SaaS version of it, adding unique value or simplifying its use.</li>
+                        <li><strong>Contribute and Gain Recognition:</strong> Become a valuable contributor to an open-source project. As your expertise grows, you can offer paid support, training, or even be hired by companies utilizing that software.</li>
+                        <li><strong>Create and Sell Components/Templates:</strong> If you're skilled in front-end development, create and sell high-quality UI components, templates, or themes compatible with popular open-source frameworks.</li>
+                        <li><strong>Offer Specialized Services:</strong> Use your knowledge of specific SaaS tools or open-source technologies to offer freelance services like custom integrations, data migration, or workflow automation.</li>
+                    </ul>
+                    <p>The key is to identify a need, leverage existing open-source solutions where possible to accelerate development, and then craft a monetization strategy that aligns with the value you provide. Start small, build consistently, and engage with communities, and you'll find numerous avenues to turn your coding passion into profit.</p>
+                </div>
+            </section>
+            <h2 class="text-4xl font-extrabold text-indigo-800 mb-10 text-center">Featured Open Source Projects with Monetization Potential</h2>
             <div class="grid grid-cols-1 gap-12">
 
-                <!-- Featured Project 1: Serenity Shores Resort -->
                 <div class="bg-white rounded-lg shadow-xl p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="space-y-4">
-                            <img src="https://images.unsplash.com/photo-1549749969-90d565617a22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEzfHxyZXNvcnQlMjByb29tfGVufDB8fHx8MTcwMTg4MTEyOXww&ixlib=rb-4.0.3&q=80&w=1080" alt="Resort Room" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                            <img src="images/image1.jpg" alt="Baserow Database Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                <a href="https://github.com/your-username/serenity-shores" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Serenity Shores Resort Website
+                                1. <a href="https://github.com/baserow/baserow" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Baserow: Open Source No-Code Database
                                 </a>
                             </h3>
                             <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Designed and developed a responsive, visually stunning website for "Serenity Shores," a luxury beach resort. This project showcases advanced front-end techniques, seamless photo galleries, and an intuitive booking system mock-up. It was built with a focus on delivering an immersive user experience, reflecting the tranquil and luxurious ambiance of the resort.
+                                **Baserow** is an open-source Airtable alternative. It offers a powerful no-code database solution that can be self-hosted or used via their cloud offering. This project exemplifies the **open-core SaaS model**, where the core product is free and open, but advanced features, managed hosting, and enterprise support are offered as a paid service.
                             </p>
                             <p class="text-md text-gray-600">
-                                **Technologies Used:** HTML5, CSS3 (Tailwind CSS), JavaScript, Swiper.js for carousels, responsive design principles.
+                                **Monetization Model:** Open-Core SaaS (managed hosting, premium features, enterprise support).<br>
+                                **Technologies Used:** Python (Django), Nuxt.js (Vue.js), PostgreSQL, Docker.
                             </p>
-                            <a href="https://github.com/your-username/serenity-shores" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                            <a href="https://github.com/baserow/baserow" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
                                 View Project on GitHub &rarr;
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Featured Project 2: AI-Powered Chatbot -->
                 <div class="bg-white rounded-lg shadow-xl p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="space-y-4">
-                            <img src="https://images.unsplash.com/photo-1620281691456-a94f6e1f0e42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDh8fGFpJTIwY2hhdGJvdHxlbnwwfHx8fDE3MjE0NDU2ODl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="AI Chatbot Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                            <img src="images/image2.jpg" alt="Plausible Analytics Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                <a href="https://github.com/your-username/ai-chatbot" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Intelligent AI Chatbot Assistant
+                                2. <a href="https://github.com/plausible/analytics" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Plausible Analytics: Privacy-Friendly Analytics
                                 </a>
                             </h3>
                             <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Developed a sophisticated AI-powered chatbot designed to streamline customer support and enhance user interaction. This project integrates natural language processing (NLP) to understand complex queries and provide accurate, context-aware responses. It features a scalable architecture and a robust backend for efficient data handling.
+                                **Plausible Analytics** offers a lightweight, open-source web analytics solution that's privacy-focused and GDPR-compliant. Its strength lies in providing essential data without relying on cookies. This project primarily uses a **SaaS subscription model** for their hosted service, making it easy for users to get started without self-hosting.
                             </p>
                             <p class="text-md text-gray-600">
-                                **Technologies Used:** Python (Flask), TensorFlow/Keras, Natural Language Toolkit (NLTK), PostgreSQL.
+                                **Monetization Model:** SaaS Subscription (for hosted service), optional self-hosting.<br>
+                                **Technologies Used:** Elixir, Phoenix, PostgreSQL, ClickHouse, Alpine.js.
                             </p>
-                            <a href="https://github.com/your-username/ai-chatbot" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                            <a href="https://github.com/plausible/analytics" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
                                 View Project on GitHub &rarr;
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Featured Project 3: E-commerce Dashboard -->
                 <div class="bg-white rounded-lg shadow-xl p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="space-y-4">
-                            <img src="https://images.unsplash.com/photo-1556740738-b6159c996615?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDExfHxlY29tbWVyY2UlMjBkYXNoYm9hcmR8ZW58MHx8fHwxNzIxNDQ2MDY0fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Dashboard Overview" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                            <img src="images/image3.jpg" alt="NocoDB Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                <a href="https://github.com/your-username/ecommerce-dashboard" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Interactive E-commerce Analytics Dashboard
+                                3. <a href="https://github.com/nocodb/nocodb" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    NocoDB: Open Source No-Code Backend
                                 </a>
                             </h3>
                             <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Built a real-time e-commerce analytics dashboard providing key insights into sales, customer behavior, and product performance. This project features interactive charts and graphs, customizable data filters, and a user-friendly interface for quick decision-making.
+                                **NocoDB** transforms any database into a smart spreadsheet, providing a powerful API for no-code application development. Similar to Baserow, it follows an **open-core model**, offering self-hostable open-source software alongside a managed cloud service with additional enterprise features.
                             </p>
                             <p class="text-md text-gray-600">
-                                **Technologies Used:** React, D3.js, Node.js, Express, MongoDB.
+                                **Monetization Model:** Open-Core SaaS (managed cloud, enterprise features, support).<br>
+                                **Technologies Used:** Node.js, Vue.js, Express.js, supported with various databases (MySQL, PostgreSQL, SQLite, SQL Server, Oracle, MariaDB).
                             </p>
-                            <a href="https://github.com/your-username/ecommerce-dashboard" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                            <a href="https://github.com/nocodb/nocodb" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
                                 View Project on GitHub &rarr;
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Featured Project 4: Mobile Recipe App -->
                 <div class="bg-white rounded-lg shadow-xl p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="space-y-4">
-                            <img src="https://images.unsplash.com/photo-1594951939103-125950ee07e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDJ8fG1vYmlsZSUyMHJlY2lwZSUyMGFwcHxlbnwwfHx8fDE3MjE0NDYyOTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Recipe App Screenshot 1" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                            <img src="images/image4.jpg" alt="Ghost CMS Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                <a href="https://github.com/your-username/mobile-recipe-app" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Cross-Platform Mobile Recipe App
+                                4. <a href="https://github.com/TryGhost/Ghost" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Ghost: Open Source Headless CMS
                                 </a>
                             </h3>
                             <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Developed a cross-platform mobile application for discovering and managing recipes. Users can search by ingredients, cuisine type, or dietary restrictions, save favorites, and create meal plans. The app features an intuitive UI/UX and offline capabilities.
+                                **Ghost** is a professional publishing platform designed for creators, offering powerful tools for newsletters, memberships, and content management. While completely open source and self-hostable, their primary revenue comes from their **Ghost(Pro) managed hosting service**, which provides convenience and scalability for users.
                             </p>
                             <p class="text-md text-gray-600">
-                                **Technologies Used:** React Native, Firebase (Authentication, Firestore), Redux, Expo.
+                                **Monetization Model:** Managed SaaS (hosting), Themes & Integrations Marketplace.<br>
+                                **Technologies Used:** Node.js, Express.js, Handlebars.js, MySQL.
                             </p>
-                            <a href="https://github.com/your-username/mobile-recipe-app" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                            <a href="https://github.com/TryGhost/Ghost" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
                                 View Project on GitHub &rarr;
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Featured Project 5: Smart Home Automation -->
                 <div class="bg-white rounded-lg shadow-xl p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="space-y-4">
-                            <img src="https://images.unsplash.com/photo-1621295325942-88f6b8b0b8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDR8fHNtYXJ0JTIwaG9tZSUyMGF1dG9tYXRpb258ZW5ufDB8fHx8MTcyMTQ0NjQ2M3ww&ixlib=rb-4.0.3&q=80&w=1080" alt="Smart Home Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                            <img src="images/image5.jpg" alt="CRM Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                <a href="https://github.com/your-username/smart-home-automation" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    IoT-Based Smart Home Automation System
+                                5. <a href="https://github.com/salesagility/SuiteCRM" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    SuiteCRM: Open Source Customer Relationship Management
                                 </a>
                             </h3>
                             <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Developed a prototype smart home automation system using IoT devices and a central hub. Users can control lighting, temperature, and security features remotely via a web interface or mobile app. The system supports integration with various smart sensors.
+                                **SuiteCRM** is a powerful, open-source CRM platform that provides comprehensive sales, marketing, and customer service tools. While the software is free, its monetization often comes from **professional services** (implementation, customization), **training**, and **premium add-ons** developed by the community or core team. It can also be offered as a managed SaaS solution by third parties.
                             </p>
                             <p class="text-md text-gray-600">
-                                **Technologies Used:** Arduino/Raspberry Pi, Python, MQTT, Node-RED, WebSockets.
+                                **Monetization Model:** Professional Services, Training, Premium Modules, Third-Party SaaS Hosting.<br>
+                                **Technologies Used:** PHP, MySQL, JavaScript.
                             </p>
-                            <a href="https://github.com/your-username/smart-home-automation" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                            <a href="https://github.com/salesagility/SuiteCRM" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
                                 View Project on GitHub &rarr;
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Featured Project 6: Fitness Tracker App -->
                 <div class="bg-white rounded-lg shadow-xl p-8">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div class="space-y-4">
-                            <img src="https://images.unsplash.com/photo-1553775957-3f309a6504a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcwMnwwfDF8c2VhcmNofDEyfHxmaXRuZXNzJTIwdHJhY2tlciUyMGFwcHxlbnwwfHx8fDE3MjE0NDY1ODd8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Fitness Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+                            <img src="images/image6.jpg" alt="Outline Knowledge Base Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                <a href="https://github.com/your-username/fitness-tracker-app" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Personal Fitness Tracker Application
+                                6. <a href="https://github.com/outline/outline" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+                                    Outline: Self-Hosted Knowledge Base
                                 </a>
                             </h3>
                             <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Developed a comprehensive fitness tracking application to help users monitor their workouts, track progress, and set health goals. Features include custom workout routines, calorie tracking, progress visualization, and integration with health APIs.
+                                **Outline** is an open-source, collaborative knowledge base for your team. It's designed to be clean, easy to use, and self-hosted. While Outline itself is open-source, the company behind it offers a **SaaS version** with managed hosting, support, and enterprise features, demonstrating another successful open-source product that thrives with a commercial offering.
                             </p>
                             <p class="text-md text-gray-600">
-                                **Technologies Used:** Swift (iOS) / Kotlin (Android), CoreData/Room, RESTful APIs, Charts.
+                                **Monetization Model:** SaaS Subscription (managed hosting), Enterprise Features.<br>
+                                **Technologies Used:** React, Node.js, PostgreSQL.
                             </p>
-                            <a href="https://github.com/your-username/fitness-tracker-app" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+                            <a href="https://github.com/outline/outline" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
                                 View Project on GitHub &rarr;
                             </a>
                         </div>
@@ -234,26 +256,82 @@
                 </div>
 
             </div>
-        </section>
-        <!-- End Featured Projects Section -->
 
-        <!-- Individual Blog Post Detail Section (kept for navigation, though likely won't be used with this structure) -->
-        <section id="post-detail-section" class="hidden bg-white p-8 rounded-lg shadow-xl">
-            <button id="back-to-posts-button" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg mb-6 transition duration-300 ease-in-out">
-                &larr; Back to All Posts
-            </button>
-            <div id="post-detail-content" class="prose max-w-none">
-                <!-- Individual post content will be loaded here by JavaScript -->
-            </div>
-        </section>
+            <section class="bg-white rounded-lg shadow-xl p-8 mt-12">
+                <h2 class="text-4xl font-extrabold text-indigo-800 mb-6 text-center">Additional Open Source Projects with Monetization Potential</h2>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p>Beyond the featured projects, many other open-source initiatives offer diverse paths to monetization. These often involve offering managed services, premium features, consulting, support, or selling related products.</p>
+                    <ul class="list-disc list-inside ml-6 mt-4 space-y-3">
+                        <li>
+                            **Mattermost:** An open-source Slack alternative for team communication.
+                            <ul>
+                                <li>**Monetization:** Enterprise editions with advanced features, professional support, and managed cloud offerings.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **Odoo:** An all-in-one suite of business management software, including CRM, ERP, accounting, and more.
+                            <ul>
+                                <li>**Monetization:** Commercial modules, managed cloud hosting, implementation services, and official support plans.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **Metabase:** An open-source business intelligence (BI) tool for data visualization and dashboards.
+                            <ul>
+                                <li>**Monetization:** Enterprise features, dedicated support, and managed cloud services.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **N8n:** A workflow automation tool that connects various applications and services.
+                            <ul>
+                                <li>**Monetization:** Cloud hosting, enterprise features, and dedicated support.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **AppFlowy:** An open-source alternative to Notion, focused on note-taking, project management, and wikis.
+                            <ul>
+                                <li>**Monetization:** Potentially via premium templates, integrations, or a hosted SaaS version in the future.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **Flarum:** A simple, modern forum software for building online communities.
+                            <ul>
+                                <li>**Monetization:** Premium extensions/plugins, themes, and managed hosting services.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **Saltcorn:** An open-source no-code platform for building database web applications.
+                            <ul>
+                                <li>**Monetization:** Commercial hosting, premium themes, and professional support/consulting.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **Keila:** A privacy-focused open-source email marketing platform.
+                            <ul>
+                                <li>**Monetization:** Managed cloud service, advanced analytics, and deliverability consulting.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **Taiga:** An open-source agile project management tool with Scrum and Kanban boards.
+                            <ul>
+                                <li>**Monetization:** Cloud hosting, enterprise features, and professional services/support.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            **Gitea / Gogs:** Lightweight self-hosted Git services.
+                            <ul>
+                                <li>**Monetization:** Could be offered as a managed hosting service for development teams.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </main>
 
         <footer class="bg-gray-800 text-white p-6 text-center mt-12">
-            <p>&copy; 2024 My Project Blog. All rights reserved.</p>
+            <p>&copy; 2025 ChromeDevStack.</p>
         </footer>
     </div>
 
-    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
