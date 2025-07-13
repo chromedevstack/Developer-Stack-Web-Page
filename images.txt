@@ -1,0 +1,123 @@
+Based on the code I provided previously, here's a breakdown:
+
+1. images/desktop_banner.jpg
+Current Name: desktop_banner.jpg
+
+Suggested New Name: No change needed, desktop_banner.jpg is a descriptive and good name for its purpose.
+
+Location: This image should be placed inside a folder named images that is in the same directory as your index.html file. So, the path will be your-project-folder/images/desktop_banner.jpg.
+
+Usage in index.html: This image is used at the very top of your main content area, acting as a header or banner image.
+
+HTML
+
+<section class="mb-12">
+    <img src="images/desktop_banner.jpg" alt="Developer Desktop Setup" class="w-full h-auto rounded-lg shadow-xl object-cover max-h-96">
+</section>
+2. images/image1.jpg for Baserow
+Current Name: image1.jpg
+
+Suggested New Name: baserow_interface.jpg or baserow_screenshot.jpg
+
+Why? This makes it immediately clear what the image depicts without having to remember that image1 corresponds to Baserow.
+
+Location: This image should be placed inside your images folder. So, the path will be your-project-folder/images/baserow_interface.jpg.
+
+Usage in index.html: This image is used for the Baserow project entry.
+
+HTML
+
+<img src="images/image1.jpg" alt="Baserow Database Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+If you rename: You would change src="images/image1.jpg" to src="images/baserow_interface.jpg".
+
+3. images/image2.jpg for Plausible Analytics
+Current Name: image2.jpg
+
+Suggested New Name: plausible_dashboard.jpg or plausible_analytics_screenshot.jpg
+
+Why? Clearer identification.
+
+Location: This image should be placed inside your images folder.
+
+Usage in index.html: This image is used for the Plausible Analytics project entry.
+
+HTML
+
+<img src="images/image2.jpg" alt="Plausible Analytics Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+If you rename: You would change src="images/image2.jpg" to src="images/plausible_dashboard.jpg".
+
+4. images/image3.jpg for NocoDB
+Current Name: image3.jpg
+
+Suggested New Name: nocodb_interface.jpg or nocodb_screenshot.jpg
+
+Why? Better specificity.
+
+Location: This image should be placed inside your images folder.
+
+Usage in index.html: This image is used for the NocoDB project entry.
+
+HTML
+
+<img src="images/image3.jpg" alt="NocoDB Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+If you rename: You would change src="images/image3.jpg" to src="images/nocodb_interface.jpg".
+
+5. images/image4.jpg for Ghost
+Current Name: image4.jpg
+
+Suggested New Name: ghost_cms_dashboard.jpg or ghost_publishing.jpg
+
+Why? Describes the content.
+
+Location: This image should be placed inside your images folder.
+
+Usage in index.html: This image is used for the Ghost project entry.
+
+HTML
+
+<img src="images/image4.jpg" alt="Ghost CMS Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+If you rename: You would change src="images/image4.jpg" to src="images/ghost_cms_dashboard.jpg".
+
+6. images/image5.jpg for SuiteCRM
+Current Name: image5.jpg
+
+Suggested New Name: suitecrm_dashboard.jpg or crm_overview.jpg
+
+Why? More descriptive.
+
+Location: This image should be placed inside your images folder.
+
+Usage in index.html: This image is used for the SuiteCRM project entry.
+
+HTML
+
+<img src="images/image5.jpg" alt="CRM Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+If you rename: You would change src="images/image5.jpg" to src="images/suitecrm_dashboard.jpg".
+
+7. images/image6.jpg for Outline
+Current Name: image6.jpg
+
+Suggested New Name: outline_knowledge_base.jpg or outline_interface.jpg
+
+Why? Clearly identifies the project.
+
+Location: This image should be placed inside your images folder.
+
+Usage in index.html: This image is used for the Outline project entry.
+
+HTML
+
+<img src="images/image6.jpg" alt="Outline Knowledge Base Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+If you rename: You would change src="images/image6.jpg" to src="images/outline_knowledge_base.jpg".
+
+In summary, to make your project folder organized and your code more readable:
+
+Create a folder named images in the same directory as your index.html.
+
+Place all your image files inside this images folder.
+
+Consider renaming image1.jpg through image6.jpg to the more descriptive names suggested above (e.g., baserow_interface.jpg, plausible_dashboard.jpg, etc.).
+
+Crucially, if you rename the image files, remember to update the src attribute in your index.html file to match the new names!
+
+This approach makes it much easier to manage your assets and understand your code in the long run.
