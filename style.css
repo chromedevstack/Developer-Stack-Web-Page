@@ -1,1 +1,135 @@
-style.css
+/* style.css */
+
+/* Inter Font (already linked in HTML, but good to have here for reference) */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Loading Screen Styles */
+#loading-screen {
+    transition: opacity 0.7s ease-out;
+}
+
+.loading-container {
+    perspective: 1000px; /* For 3D transformations */
+}
+
+.loading-x-container {
+    position: relative; /* Needed for absolute positioning of circle */
+    width: 120px; /* Adjusted size for circle and lines */
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem; /* Add some space below the animation */
+}
+
+.loading-x-container .line {
+    background-color: white;
+    width: 8px; /* Fixed width */
+    height: 100px; /* Initial height, will be animated */
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    animation: extendSpin 3s infinite ease-in-out; /* Combined animation */
+}
+
+.loading-x-container .line-1 {
+    transform: translate(-50%, -50%) rotate(45deg); /* Initial rotation */
+    animation-delay: 0s;
+}
+
+.loading-x-container .line-2 {
+    transform: translate(-50%, -50%) rotate(-45deg); /* Initial rotation */
+    animation-delay: 0.15s; /* Slightly delayed for subtle effect */
+}
+
+/* New: Circle around the X */
+.loading-x-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    border-top-color: transparent; /* Makes it look like it's spinning */
+    border-radius: 50%;
+    animation: spinCircle 2s infinite linear;
+}
+
+@keyframes extendSpin {
+    0% {
+        height: 80px;
+        transform: translate(-50%, -50%) rotate(var(--initial-rotation, 0deg));
+    }
+    25% {
+        height: 120px; /* Extends */
+        transform: translate(-50%, -50%) rotate(calc(var(--initial-rotation, 0deg) + 90deg));
+    }
+    50% {
+        height: 80px; /* Retracts */
+        transform: translate(-50%, -50%) rotate(calc(var(--initial-rotation, 0deg) + 180deg));
+    }
+    75% {
+        height: 120px; /* Extends again */
+        transform: translate(-50%, -50%) rotate(calc(var(--initial-rotation, 0deg) + 270deg));
+    }
+    100% {
+        height: 80px; /* Retracts to original */
+        transform: translate(-50%, -50%) rotate(calc(var(--initial-rotation, 0deg) + 360deg));
+    }
+}
+
+/* Custom properties for initial rotation to be used in extendSpin */
+.loading-x-container .line-1 {
+    --initial-rotation: 45deg;
+}
+
+.loading-x-container .line-2 {
+    --initial-rotation: -45deg;
+}
+
+
+@keyframes spinCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Donation Screen Styles */
+#donation-screen {
+    transition: opacity 0.5s ease-out;
+}
+
+#donation-screen.show {
+    opacity: 1;
+}
+
+#donation-screen > div {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+#donation-screen.show > div {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Utility for hidden elements with transition */
+.hidden {
+    display: none;
+}
