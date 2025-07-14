@@ -34,13 +34,13 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <button class="access-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="5">
+                <button class="access-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
                     Donate $5
                 </button>
-                <button class="access-button bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="10">
+                <button class="access-button bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
                     Donate $10
                 </button>
-                <button class="access-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-amount="15">
+                <button class="access-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
                     Donate $15
                 </button>
             </div>
@@ -332,6 +332,55 @@
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            const donationScreen = document.getElementById('donation-screen');
+            const mainContent = document.getElementById('main-content');
+            const freeAccessButton = document.getElementById('free-access-button');
+            const accessButtons = document.querySelectorAll('.access-button[data-type="donate"]');
+
+            // Simulate loading
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                loadingScreen.addEventListener('transitionend', () => {
+                    loadingScreen.remove();
+                    donationScreen.classList.remove('hidden');
+                    setTimeout(() => {
+                        donationScreen.querySelector('.bg-white').style.transform = 'scale(1)';
+                        donationScreen.querySelector('.bg-white').style.opacity = '1';
+                    }, 50); // Small delay for the pop-in effect
+                }, { once: true });
+            }, 2000); // Adjust loading time as needed
+
+            const grantAccess = () => {
+                donationScreen.querySelector('.bg-white').style.transform = 'scale(0.95)';
+                donationScreen.querySelector('.bg-white').style.opacity = '0';
+                donationScreen.addEventListener('transitionend', () => {
+                    donationScreen.classList.add('hidden');
+                    mainContent.classList.remove('hidden');
+                    setTimeout(() => {
+                        mainContent.style.opacity = '1';
+                    }, 50); // Small delay for the fade-in effect
+                }, { once: true });
+            };
+
+            // Event listener for "Free Access" button
+            freeAccessButton.addEventListener('click', () => {
+                grantAccess();
+            });
+
+            // Event listeners for donation buttons
+            accessButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const paypalLink = button.dataset.paypalLink;
+                    if (paypalLink) {
+                        window.open(paypalLink, '_blank'); // Open PayPal link in a new tab
+                    }
+                    grantAccess(); // Immediately grant access after clicking a donation button
+                });
+            });
+        });
+    </script>
 </body>
 </html>
