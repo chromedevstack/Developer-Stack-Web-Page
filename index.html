@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Developer Stack Projects</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="images/favicon.png"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Stack Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ✅ Favicon Fixes: Absolute path, fallback support, and platform compatibility -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://chromedevstack.github.io/SQR/images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="https://chromedevstack.github.io/SQR/images/favicon.ico">
+  <link rel="apple-touch-icon" href="https://chromedevstack.github.io/SQR/images/favicon.png">
+  <link rel="shortcut icon" href="https://chromedevstack.github.io/SQR/images/favicon.png">
+  <meta name="theme-color" content="#4F46E5">
+
+  <!-- ✅ JS: Favicon load checker -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const testImage = document.createElement('img');
+      testImage.src = 'https://chromedevstack.github.io/SQR/images/favicon.png';
+      testImage.onload = () => console.log('[✓] Favicon loaded successfully');
+      testImage.onerror = () => console.error('[!] Favicon failed to load');
+    });
+  </script>
 </head>
 <body class="font-inter">
 
