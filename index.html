@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChromeDevStack Web Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChromeDevStack Projects</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="font-inter">
 
-    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-purple-600 via-indigo-700 to-blue-800 z-50">
-        <div class="loading-container text-white flex flex-col items-center">
-            <div class="loading-x-container relative w-32 h-32 mb-8">
-                <div class="line line-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
-                <div class="line line-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-45"></div>
-            </div>
-            <p class="loading-text text-2xl font-semibold opacity-0 transition-opacity duration-500">Loading Dev Stack...</p>
-        </div>
-    </div>
+<div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-purple-600 via-indigo-700 to-blue-800 z-50">
+<div class="loading-container text-white flex flex-col items-center">
+<div class="loading-x-container relative w-32 h-32 mb-8">
+<div class="line line-1 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45"></div>
+<div class="line line-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-45"></div>
+</div>
+<p class="loading-text text-2xl font-semibold opacity-0 transition-opacity duration-500">Loading Dev Stack...</p>
+</div>
+</div>
 
-    <div id="donation-screen" class="hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-100 z-40 p-4">
-        <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl text-center max-w-lg w-full transform transition-all duration-500 scale-95 opacity-0">
-            <h2 class="text-4xl font-extrabold text-indigo-700 mb-6">Access Developer Stack Projects</h2>
-            <p class="text-gray-700 text-lg mb-8 leading-relaxed">
-                Donations are Welcome.
-            </p>
+<div id="donation-screen" class="hidden fixed inset-0 flex flex-col items-center justify-center bg-gray-100 z-40 p-4">
+<div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl text-center max-w-lg w-full transform transition-all duration-500 scale-95 opacity-0">
+<h2 class="text-4xl font-extrabold text-indigo-700 mb-6">Access Developer Stack Projects</h2>
+<p class="text-gray-700 text-lg mb-8 leading-relaxed">
+Donations are Welcome.
+</p>
 
-            <div class="flex flex-wrap justify-center items-center gap-6 mb-10">
-                <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal Accepted" class="h-12 rounded-md shadow-sm">
-                <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_74x46.jpg" alt="PayPal Secure" class="h-12 rounded-md shadow-sm">
-            </div>
+<div class="flex flex-wrap justify-center items-center gap-6 mb-10">
+<img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" alt="PayPal Accepted" class="h-12 rounded-md shadow-sm">
+<img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_74x46.jpg" alt="PayPal Secure" class="h-12 rounded-md shadow-sm">
+</div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <button class="access-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
-                    Donate $5
-                </button>
-                <button class="access-button bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
-                    Donate $10
-                </button>
-                <button class="access-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
-                    Donate $15
-                </button>
-            </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<button class="access-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
+Donate $5
+</button>
+<button class="access-button bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
+Donate $10
+</button>
+<button class="access-button bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300 ease-in-out shadow-lg transform hover:scale-105" data-type="donate" data-paypal-link="https://www.paypal.com/donate?hosted_button_id=5MH5HTSKWLHKA">
+Donate $15
+</button>
+</div>
 
-            <button id="free-access-button" class="access-button bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out mt-6 w-full md:w-auto">
-                Free Access
-            </button>
+<button id="free-access-button" class="access-button bg-gray-500 hover:bg-gray-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out mt-6 w-full md:w-auto">
+Free Access
+</button>
 
-            <p class="text-sm text-gray-500 mt-8">
-                *Note: Donation buttons are simulated for demonstration. Clicking any button will grant immediate access to the site content. (Testing Phase)
-            </p>
-        </div>
-    </div>
+<p class="text-sm text-gray-500 mt-8">
+*Note: Donation buttons are simulated for demonstration. Clicking any button will grant immediate access to the site content. (Testing Phase)
+</p>
+</div>
+</div>
 
-    <div id="main-content" class="hidden opacity-0 transition-opacity duration-500 min-h-screen bg-gray-100 text-gray-800">
-        <header class="bg-indigo-700 text-white p-6 shadow-lg">
-            <div class="container mx-auto flex justify-between items-center">
-                <h1 class="text-4xl font-extrabold">ChromeDevStack Projects</h1>
-                <a href="https://github.com/your-username" target="_blank" class="text-white hover:text-indigo-200 transition duration-300">
-                    Visit GitHub
-                </a>
-            </div>
-        </header>
+<div id="main-content" class="hidden opacity-0 transition-opacity duration-500 min-h-screen bg-gray-100 text-gray-800">
+<header class="bg-indigo-700 text-white p-6 shadow-lg">
+<div class="container mx-auto flex justify-between items-center">
+<h1 class="text-4xl font-extrabold">ChromeDevStack Projects</h1>
+<a href="https://github.com/your-username" target="_blank" class="text-white hover:text-indigo-200 transition duration-300">
+Visit GitHub
+</a>
+</div>
+</header>
 
-        <main class="container mx-auto mt-12 p-6 md:p-8">
-            <section class="mb-12">
-                <img src="images/desktop_banner.jpg" alt="Developer Desktop Setup" class="w-full h-auto rounded-lg shadow-xl object-cover max-h-96">
-            </section>
+<main class="container mx-auto mt-12 p-6 md:p-8">
+<section class="mb-12">
+<img src="images/desktop_banner.jpg" alt="Developer Desktop Setup" class="w-full h-auto rounded-lg shadow-xl object-cover max-h-96">
+</section>
 
-            <section class="bg-white rounded-lg shadow-xl p-8 mb-12">
-                <h2 class="text-4xl font-extrabold text-indigo-800 mb-6 text-center">Featured Post: Mastering SaaS & Open Source for Exponential Profit</h2>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p>In today's relentlessly innovative digital landscape, Software as a Service (SaaS) and Open Source technologies aren't just buzzwords; they are the bedrock of unparalleled innovation and boundless entrepreneurial opportunity. This definitive featured post meticulously dissects how you, a forward-thinking developer or aspiring entrepreneur, can strategically harness these formidable concepts. Our goal isn't merely personal skill enhancement, but to empower you to architect impactful, scalable projects that consistently generate significant income, transforming your valuable free time into a powerful profit engine.</p>
+<section class="bg-white rounded-lg shadow-xl p-8 mb-12">
+<h2 class="text-4xl font-extrabold text-indigo-800 mb-6 text-center">Featured Post: Mastering SaaS & Open Source for Exponential Profit</h2>
+<div class="prose max-w-none text-gray-700 leading-relaxed">
+<p>In today's relentlessly innovative digital landscape, Software as a Service (SaaS) and Open Source technologies aren't just buzzwords; they are the bedrock of unparalleled innovation and boundless entrepreneurial opportunity. This definitive featured post meticulously dissects how you, a forward-thinking developer or aspiring entrepreneur, can strategically harness these formidable concepts. Our goal isn't merely personal skill enhancement, but to empower you to architect impactful, scalable projects that consistently generate significant income, transforming your valuable free time into a powerful profit engine.</p>
 
-                    <h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Decoding the Power of SaaS: Your Blueprint for Recurring Revenue</h3>
-                    <p>SaaS represents a paradigm shift in software delivery, a model where robust applications are expertly hosted and seamlessly delivered on a subscription basis. Envision the ubiquity of giants like Notion, Slack, or Google Workspace – their success underscores the inherent beauty of SaaS: unparalleled accessibility (truly web-native), effortless scalability to meet escalating demand, and, critically, a <strong>predictable, recurring revenue stream</strong> for astute creators. By meticulously crafting a SaaS tool, you don't just sell software; you cultivate an ongoing, evolving value proposition for your users, thereby constructing a profoundly sustainable and defensible business.</p>
-                    <p><strong>To truly thrive in the SaaS arena, concentrate on these core tenets:</strong></p>
-                    <ul class="list-disc list-inside ml-6 mt-4 space-y-2">
-                        <li><strong>Pinpoint a Pressing Problem:</strong> Success hinges on identifying a palpable pain point that your software uniquely alleviates.</li>
-                        <li><strong>Engineer an Intuitive User Experience:</strong> Frictionless design and a delightful user journey are paramount for adoption and retention.</li>
-                        <li><strong>Embrace Relentless Iteration:</strong> The SaaS lifecycle demands continuous evolution, driven by proactive user feedback and market shifts.</li>
-                    </ul>
-                    <p>Monetization within SaaS is multifaceted, often manifesting through intelligently structured tiered subscriptions, dynamic usage-based pricing models, or the strategic unveiling of premium, value-added features that unlock advanced capabilities.</p>
+<h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Decoding the Power of SaaS: Your Blueprint for Recurring Revenue</h3>
+<p>SaaS represents a paradigm shift in software delivery, a model where robust applications are expertly hosted and seamlessly delivered on a subscription basis. Envision the ubiquity of giants like Notion, Slack, or Google Workspace – their success underscores the inherent beauty of SaaS: unparalleled accessibility (truly web-native), effortless scalability to meet escalating demand, and, critically, a <strong>predictable, recurring revenue stream</strong> for astute creators. By meticulously crafting a SaaS tool, you don't just sell software; you cultivate an ongoing, evolving value proposition for your users, thereby constructing a profoundly sustainable and defensible business.</p>
+<p><strong>To truly thrive in the SaaS arena, concentrate on these core tenets:</strong></p>
+<ul class="list-disc list-inside ml-6 mt-4 space-y-2">
+<li><strong>Pinpoint a Pressing Problem:</strong> Success hinges on identifying a palpable pain point that your software uniquely alleviates.</li>
+<li><strong>Engineer an Intuitive User Experience:</strong> Frictionless design and a delightful user journey are paramount for adoption and retention.</li>
+<li><strong>Embrace Relentless Iteration:</strong> The SaaS lifecycle demands continuous evolution, driven by proactive user feedback and market shifts.</li>
+</ul>
+<p>Monetization within SaaS is multifaceted, often manifesting through intelligently structured tiered subscriptions, dynamic usage-based pricing models, or the strategic unveiling of premium, value-added features that unlock advanced capabilities.</p>
 
-                    <h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Unlocking Wealth from Open Source: Beyond "Free" to Financially Empowered</h3>
-                    <p>Open Source software, characterized by its freely accessible, modifiable, and distributable source code, is more than a technical philosophy; it's a vibrant ecosystem fostering unparalleled collaboration and radical transparency. Landmark projects like Linux, WordPress, and Python stand as living testaments to the transformative power of this collaborative ethos. Actively contributing to established open-source projects isn't just about giving back; it's a strategic investment in rapidly expanding your technical acumen, forging invaluable professional networks, and cultivating an impeccable reputation within the global developer community.</p>
-                    <p>"But how," you might ask, "can one genuinely profit from something inherently free?" The answer lies in ingeniously crafted business models that brilliantly capitalize on the open-source foundation:</p>
-                    <ul class="list-disc list-inside ml-6 mt-4 space-y-2">
-                        <li><strong>Elite Support & Bespoke Consulting:</strong> A vast market exists for expert guidance. Businesses and individuals are often eager to pay handsomely for specialized assistance in implementing, meticulously customizing, or efficiently troubleshooting complex open-source software solutions. Your deep knowledge becomes their indispensable asset.</li>
-                        <li><strong>The Ingenious Open-Core Model:</strong> This highly effective strategy involves offering a feature-rich, free, open-source "core" version of your software. The true monetization then emerges from selling proprietary, advanced features, seamless third-party integrations, or enterprise-grade support and security enhancements that cater to high-value clients.</li>
-                        <li><strong>Open Source as a Managed SaaS Offering:</strong> Transform an existing open-source project into a highly convenient, managed service. By handling hosting, maintenance, updates, and performance optimization, you charge a premium subscription, offering unparalleled convenience and peace of mind to users who prefer not to manage infrastructure themselves.</li>
-                        <li><strong>Strategic Donations & Corporate Sponsorships:</strong> For popular, impactful projects, cultivating a strong community around your work can unlock significant revenue streams through direct community donations or lucrative corporate sponsorships seeking to align with and support your project's mission.</li>
-                        <li><strong>Profit-Driving Features & Plugin Marketplaces:</strong> Develop and strategically market premium add-ons, sophisticated themes, or specialized plugins that profoundly extend the core functionality of a widely adopted open-source project. This allows users to enhance their experience while providing you with direct revenue.</li>
-                    </ul>
+<h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Unlocking Wealth from Open Source: Beyond "Free" to Financially Empowered</h3>
+<p>Open Source software, characterized by its freely accessible, modifiable, and distributable source code, is more than a technical philosophy; it's a vibrant ecosystem fostering unparalleled collaboration and radical transparency. Landmark projects like Linux, WordPress, and Python stand as living testaments to the transformative power of this collaborative ethos. Actively contributing to established open-source projects isn't just about giving back; it's a strategic investment in rapidly expanding your technical acumen, forging invaluable professional networks, and cultivating an impeccable reputation within the global developer community.</p>
+<p>"But how," you might ask, "can one genuinely profit from something inherently free?" The answer lies in ingeniously crafted business models that brilliantly capitalize on the open-source foundation:</p>
+<ul class="list-disc list-inside ml-6 mt-4 space-y-2">
+<li><strong>Elite Support & Bespoke Consulting:</strong> A vast market exists for expert guidance. Businesses and individuals are often eager to pay handsomely for specialized assistance in implementing, meticulously customizing, or efficiently troubleshooting complex open-source software solutions. Your deep knowledge becomes their indispensable asset.</li>
+<li><strong>The Ingenious Open-Core Model:</strong> This highly effective strategy involves offering a feature-rich, free, open-source "core" version of your software. The true monetization then emerges from selling proprietary, advanced features, seamless third-party integrations, or enterprise-grade support and security enhancements that cater to high-value clients.</li>
+<li><strong>Open Source as a Managed SaaS Offering:</strong> Transform an existing open-source project into a highly convenient, managed service. By handling hosting, maintenance, updates, and performance optimization, you charge a premium subscription, offering unparalleled convenience and peace of mind to users who prefer not to manage infrastructure themselves.</li>
+<li><strong>Strategic Donations & Corporate Sponsorships:</strong> For popular, impactful projects, cultivating a strong community around your work can unlock significant revenue streams through direct community donations or lucrative corporate sponsorships seeking to align with and support your project's mission.</li>
+<li><strong>Profit-Driving Features & Plugin Marketplaces:</strong> Develop and strategically market premium add-ons, sophisticated themes, or specialized plugins that profoundly extend the core functionality of a widely adopted open-source project. This allows users to enhance their experience while providing you with direct revenue.</li>
+</ul>
 
-                    <h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Synthesizing SaaS & Open Source: Your Accelerated Path to Personal Profit</h3>
-                    <p>The genuine nexus of opportunity, particularly for ambitious individuals with available free time, resides in the powerful synergy between SaaS and Open Source. This dynamic combination offers accelerated pathways to creating valuable, monetizable products:</p>
-                    <ul class="list-disc list-inside ml-6 mt-4 space-y-2">
-                        <li><strong>Architect Niche SaaS Solutions on Proven Open-Source Foundations:</strong> Identify an underserved market need that an existing open-source project partially addresses. Then, build a polished, hosted SaaS version of it, injecting proprietary value, simplifying complex workflows, or adding crucial integrations that differentiate your offering and command a subscription fee.</li>
-                        <li><strong>Elevate Your Profile Through Strategic Open-Source Contributions:</strong> Immerse yourself in open-source communities. Become an indispensable contributor, a recognized expert. As your specialized expertise flourishes, you can command premium rates for paid support contracts, deliver high-value training workshops, or even be directly recruited by organizations heavily relying on the software you've mastered.</li>
-                        <li><strong>Curate & Sell Premium Components/Templates:</strong> If your strengths lie in exquisite front-end development, there's a lucrative market for crafting and selling meticulously designed UI components, responsive templates, or elegant themes that seamlessly integrate with popular open-source frameworks (e.g., React, Vue, Angular, Bootstrap).</li>
-                        <li><strong>Offer Hyper-Specialized Services:</strong> Leverage your profound knowledge of niche SaaS tools or specific open-source technologies to establish a highly profitable freelance or consulting practice. Focus on delivering bespoke services such as complex custom integrations, large-scale data migration, or automated workflow solutions that save businesses significant time and resources.</li>
-                    </ul>
-                    <p>The fundamental principle is clear: <strong>Identify a genuine market need, strategically leverage the speed and robustness of existing open-source solutions to dramatically accelerate your development cycle, and then meticulously craft a compelling monetization strategy that directly aligns with the unique value you deliver.</strong> Begin with small, manageable projects, cultivate a disciplined approach to consistent development, and actively engage with vibrant online communities. By doing so, you will uncover a multitude of lucrative avenues, transforming your innate coding passion into a tangible, thriving enterprise.</p>
-                </div>
-            </section>
+<h3 class="text-2xl font-semibold text-indigo-700 mt-8 mb-4">Synthesizing SaaS & Open Source: Your Accelerated Path to Personal Profit</h3>
+<p>The genuine nexus of opportunity, particularly for ambitious individuals with available free time, resides in the powerful synergy between SaaS and Open Source. This dynamic combination offers accelerated pathways to creating valuable, monetizable products:</p>
+<ul class="list-disc list-inside ml-6 mt-4 space-y-2">
+<li><strong>Architect Niche SaaS Solutions on Proven Open-Source Foundations:</strong> Identify an underserved market need that an existing open-source project partially addresses. Then, build a polished, hosted SaaS version of it, injecting proprietary value, simplifying complex workflows, or adding crucial integrations that differentiate your offering and command a subscription fee.</li>
+<li><strong>Elevate Your Profile Through Strategic Open-Source Contributions:</strong> Immerse yourself in open-source communities. Become an indispensable contributor, a recognized expert. As your specialized expertise flourishes, you can command premium rates for paid support contracts, deliver high-value training workshops, or even be directly recruited by organizations heavily relying on the software you've mastered.</li>
+<li><strong>Curate & Sell Premium Components/Templates:</strong> If your strengths lie in exquisite front-end development, there's a lucrative market for crafting and selling meticulously designed UI components, responsive templates, or elegant themes that seamlessly integrate with popular open-source frameworks (e.g., React, Vue, Angular, Bootstrap).</li>
+<li><strong>Offer Hyper-Specialized Services:</strong> Leverage your profound knowledge of niche SaaS tools or specific open-source technologies to establish a highly profitable freelance or consulting practice. Focus on delivering bespoke services such as complex custom integrations, large-scale data migration, or automated workflow solutions that save businesses significant time and resources.</li>
+</ul>
+<p>The fundamental principle is clear: <strong>Identify a genuine market need, strategically leverage the speed and robustness of existing open-source solutions to dramatically accelerate your development cycle, and then meticulously craft a compelling monetization strategy that directly aligns with the unique value you deliver.</strong> Begin with small, manageable projects, cultivate a disciplined approach to consistent development, and actively engage with vibrant online communities. By doing so, you will uncover a multitude of lucrative avenues, transforming your innate coding passion into a tangible, thriving enterprise.</p>
+</div>
+</section>
 
             <section class="bg-white rounded-lg shadow-xl p-8 mb-12">
                 <h2 class="text-4xl font-extrabold text-indigo-800 mb-6 text-center">Unlock Your Potential: Top SaaS Niches for Solopreneurs</h2>
@@ -173,272 +173,284 @@
                     <p>By keeping these principles in mind, solopreneurs can build impactful and profitable SaaS products.</p>
                 </div>
             </section>
-            <h2 class="text-4xl font-extrabold text-indigo-800 mb-10 text-center">Featured Open Source Projects with Monetization Potential</h2>
-            <div class="grid grid-cols-1 gap-12">
+<h2 class="text-4xl font-extrabold text-indigo-800 mb-10 text-center">Featured Open Source Projects with Monetization Potential</h2>
+<div class="grid grid-cols-1 gap-12">
 
-                <div class="bg-white rounded-lg shadow-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <img src="images/image1.jpg" alt="Baserow Database Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                1. <a href="https://github.com/baserow/baserow" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Baserow: Open Source No-Code Database
-                                </a>
-                            </h3>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                <strong>Baserow</strong> is an open-source Airtable alternative. It offers a powerful no-code database solution that can be self-hosted or used via their cloud offering. This project exemplifies the <strong>open-core SaaS model</strong>, where the core product is free and open, but advanced features, managed hosting, and enterprise support are offered as a paid service.
-                            </p>
-                            <p class="text-md text-gray-600">
-                                <strong>Monetization Model:</strong> Open-Core SaaS (managed hosting, premium features, enterprise support).<br>
-                                <strong>Technologies Used:</strong> Python (Django), Nuxt.js (Vue.js), PostgreSQL, Docker.
-                            </p>
-                            <a href="https://github.com/baserow/baserow" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
-                                View Project on GitHub &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-white rounded-lg shadow-xl p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<img src="images/image1.jpg" alt="Baserow Database Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+</div>
+<div>
+<h3 class="text-3xl font-bold text-gray-900 mb-4">
+1. <a href="https://github.com/baserow/baserow" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+Baserow: Open Source No-Code Database
+</a>
+</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+<strong>Baserow</strong> is an open-source Airtable alternative. It offers a powerful no-code database solution that can be self-hosted or used via their cloud offering. This project exemplifies the <strong>open-core SaaS model</strong>, where the core product is free and open, but advanced features, managed hosting, and enterprise support are offered as a paid service.
+</p>
+<p class="text-md text-gray-600">
+<strong>Monetization Model:</strong> Open-Core SaaS (managed hosting, premium features, enterprise support).<br>
+<strong>Technologies Used:</strong> Python (Django), Nuxt.js (Vue.js), PostgreSQL, Docker.
+</p>
+<a href="https://github.com/baserow/baserow" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+View Project on GitHub &rarr;
+</a>
+</div>
+</div>
+</div>
 
-                <div class="bg-white rounded-lg shadow-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <img src="images/image2.jpg" alt="Plausible Analytics Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                2. <a href="https://github.com/plausible/analytics" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Plausible Analytics: Privacy-Friendly Analytics
-                                </a>
-                            </h3>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                <strong>Plausible Analytics</strong> offers a lightweight, open-source web analytics solution that's privacy-focused and GDPR-compliant. Its strength lies in providing essential data without relying on cookies. This project primarily uses a <strong>SaaS subscription model</strong> for their hosted service, making it easy for users to get started without self-hosting.
-                            </p>
-                            <p class="text-md text-gray-600">
-                                <strong>Monetization Model:</strong> SaaS Subscription (for hosted service), optional self-hosting.<br>
-                                <strong>Technologies Used:</strong> Elixir, Phoenix, PostgreSQL, ClickHouse, Alpine.js.
-                            </p>
-                            <a href="https://github.com/plausible/analytics" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
-                                View Project on GitHub &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-white rounded-lg shadow-xl p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<img src="images/image2.jpg" alt="Plausible Analytics Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+</div>
+<div>
+<h3 class="text-3xl font-bold text-gray-900 mb-4">
+2. <a href="https://github.com/plausible/analytics" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+Plausible Analytics: Privacy-Friendly Analytics
+</a>
+</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+<strong>Plausible Analytics</strong> offers a lightweight, open-source web analytics solution that's privacy-focused and GDPR-compliant. Its strength lies in providing essential data without relying on cookies. This project primarily uses a <strong>SaaS subscription model</strong> for their hosted service, making it easy for users to get started without self-hosting.
+</p>
+<p class="text-md text-gray-600">
+<strong>Monetization Model:</strong> SaaS Subscription (for hosted service), optional self-hosting.<br>
+<strong>Technologies Used:</strong> Elixir, Phoenix, PostgreSQL, ClickHouse, Alpine.js.
+</p>
+<a href="https://github.com/plausible/analytics" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+View Project on GitHub &rarr;
+</a>
+</div>
+</div>
+</div>
 
-                <div class="bg-white rounded-lg shadow-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <img src="images/image3.jpg" alt="NocoDB Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                3. <a href="https://github.com/nocodb/nocodb" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    NocoDB: Open Source No-Code Backend
-                                </a>
-                            </h3>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                <strong>NocoDB</strong> transforms any database into a smart spreadsheet, providing a powerful API for no-code application development. Similar to Baserow, it follows an <strong>open-core model</strong>, offering self-hostable open-source software alongside a managed cloud service with additional enterprise features.
-                            </p>
-                            <p class="text-md text-gray-600">
-                                <strong>Monetization Model:</strong> Open-Core SaaS (managed cloud, enterprise features, support).<br>
-                                <strong>Technologies Used:</strong> Node.js, Vue.js, Express.js, supported with various databases (MySQL, PostgreSQL, SQLite, SQL Server, Oracle, MariaDB).
-                            </p>
-                            <a href="https://github.com/nocodb/nocodb" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
-                                View Project on GitHub &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-white rounded-lg shadow-xl p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<img src="images/image3.jpg" alt="NocoDB Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+</div>
+<div>
+<h3 class="text-3xl font-bold text-gray-900 mb-4">
+3. <a href="https://github.com/nocodb/nocodb" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+NocoDB: Open Source No-Code Backend
+</a>
+</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+<strong>NocoDB</strong> transforms any database into a smart spreadsheet, providing a powerful API for no-code application development. Similar to Baserow, it follows an <strong>open-core model</strong>, offering self-hostable open-source software alongside a managed cloud service with additional enterprise features.
+</p>
+<p class="text-md text-gray-600">
+<strong>Monetization Model:</strong> Open-Core SaaS (managed cloud, enterprise features, support).<br>
+<strong>Technologies Used:</strong> Node.js, Vue.js, Express.js, supported with various databases (MySQL, PostgreSQL, SQLite, SQL Server, Oracle, MariaDB).
+</p>
+<a href="https://github.com/nocodb/nocodb" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+View Project on GitHub &rarr;
+</a>
+</div>
+</div>
+</div>
 
-                <div class="bg-white rounded-lg shadow-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <img src="images/image4.jpg" alt="Ghost CMS Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                4. <a href="https://github.com/TryGhost/Ghost" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Ghost: Open Source Headless CMS
-                                </a>
-                            </h3>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                <strong>Ghost</strong> is a professional publishing platform designed for creators, offering powerful tools for newsletters, memberships, and content management. While completely open source and self-hostable, their primary revenue comes from their <strong>Ghost(Pro) managed hosting service</strong>, which provides convenience and scalability for users.
-                            </p>
-                            <p class="text-md text-gray-600">
-                                <strong>Monetization Model:</strong> Managed SaaS (hosting), Themes & Integrations Marketplace.<br>
-                                <strong>Technologies Used:</strong> Node.js, Express.js, Handlebars.js, MySQL.
-                            </p>
-                            <a href="https://github.com/TryGhost/Ghost" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
-                                View Project on GitHub &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-white rounded-lg shadow-xl p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<img src="images/image4.jpg" alt="Ghost CMS Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+</div>
+<div>
+<h3 class="text-3xl font-bold text-gray-900 mb-4">
+4. <a href="https://github.com/TryGhost/Ghost" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+Ghost: Open Source Headless CMS
+</a>
+</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+<strong>Ghost</strong> is a professional publishing platform designed for creators, offering powerful tools for newsletters, memberships, and content management. While completely open source and self-hostable, their primary revenue comes from their <strong>Ghost(Pro) managed hosting service</strong>, which provides convenience and scalability for users.
+</p>
+<p class="text-md text-gray-600">
+<strong>Monetization Model:</strong> Managed SaaS (hosting), Themes & Integrations Marketplace.<br>
+<strong>Technologies Used:</strong> Node.js, Express.js, Handlebars.js, MySQL.
+</p>
+<a href="https://github.com/TryGhost/Ghost" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+View Project on GitHub &rarr;
+</a>
+</div>
+</div>
+</div>
 
-                <div class="bg-white rounded-lg shadow-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <img src="images/image5.jpg" alt="CRM Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                5. <a href="https://github.com/salesagility/SuiteCRM" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    SuiteCRM: Open Source Customer Relationship Management
-                                </a>
-                            </h3>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                <strong>SuiteCRM</strong> is a powerful, open-source CRM platform that provides comprehensive sales, marketing, and customer service tools. While the software is free, its monetization often comes from <strong>professional services</strong> (implementation, customization), <strong>training</strong>, and <strong>premium add-ons</strong> developed by the community or core team. It can also be offered as a managed SaaS solution by third parties.
-                            </p>
-                            <p class="text-md text-gray-600">
-                                <strong>Monetization Model:</strong> Professional Services, Training, Premium Modules, Third-Party SaaS Hosting.<br>
-                                <strong>Technologies Used:</strong> PHP, MySQL, JavaScript.
-                            </p>
-                            <a href="https://github.com/salesagility/SuiteCRM" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
-                                View Project on GitHub &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-white rounded-lg shadow-xl p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<img src="images/image5.jpg" alt="CRM Dashboard" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+</div>
+<div>
+<h3 class="text-3xl font-bold text-gray-900 mb-4">
+5. <a href="https://github.com/salesagility/SuiteCRM" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+SuiteCRM: Open Source Customer Relationship Management
+</a>
+</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+<strong>SuiteCRM</strong> is a powerful, open-source CRM platform that provides comprehensive sales, marketing, and customer service tools. While the software is free, its monetization often comes from <strong>professional services</strong> (implementation, customization), <strong>training</strong>, and <strong>premium add-ons</strong> developed by the community or core team. It can also be offered as a managed SaaS solution by third parties.
+</p>
+<p class="text-md text-gray-600">
+<strong>Monetization Model:</strong> Professional Services, Training, Premium Modules, Third-Party SaaS Hosting.<br>
+<strong>Technologies Used:</strong> PHP, MySQL, JavaScript.
+</p>
+<a href="https://github.com/salesagility/SuiteCRM" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+View Project on GitHub &rarr;
+</a>
+</div>
+</div>
+</div>
 
-                <div class="bg-white rounded-lg shadow-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <img src="images/image6.jpg" alt="Outline Knowledge Base Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-4">
-                                6. <a href="https://github.com/outline/outline" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
-                                    Outline: Self-Hosted Knowledge Base
-                                </a>
-                            </h3>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                <strong>Outline</strong> is an open-source, collaborative knowledge base for your team. It's designed to be clean, easy to use, and self-hosted. While Outline itself is open-source, the company behind it offers a <strong>SaaS version</strong> with managed hosting, support, and enterprise features, demonstrating another successful open-source product that thrives with a commercial offering.
-                            </p>
-                            <p class="text-md text-gray-600">
-                                <strong>Monetization Model:</strong> SaaS Subscription (managed hosting), Enterprise Features.<br>
-                                <strong>Technologies Used:</strong> React, Node.js, PostgreSQL.
-                            </p>
-                            <a href="https://github.com/outline/outline" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
-                                View Project on GitHub &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<div class="bg-white rounded-lg shadow-xl p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<img src="images/image6.jpg" alt="Outline Knowledge Base Interface" class="rounded-lg shadow-md w-full h-auto object-cover max-h-72">
+</div>
+<div>
+<h3 class="text-3xl font-bold text-gray-900 mb-4">
+6. <a href="https://github.com/outline/outline" target="_blank" class="text-indigo-700 hover:text-indigo-900 transition duration-300">
+Outline: Self-Hosted Knowledge Base
+</a>
+</h3>
+<p class="text-lg text-gray-700 leading-relaxed mb-6">
+<strong>Outline</strong> is an open-source, collaborative knowledge base for your team. It's designed to be clean, easy to use, and self-hosted. While Outline itself is open-source, the company behind it offers a <strong>SaaS version</strong> with managed hosting, support, and enterprise features, demonstrating another successful open-source product that thrives with a commercial offering.
+</p>
+<p class="text-md text-gray-600">
+<strong>Monetization Model:</strong> SaaS Subscription (managed hosting), Enterprise Features.<br>
+<strong>Technologies Used:</strong> React, Node.js, PostgreSQL.
+</p>
+<a href="https://github.com/outline/outline" target="_blank" class="mt-6 inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md">
+View Project on GitHub &rarr;
+</a>
+</div>
+</div>
+</div>
 
-            </div>
+</div>
 
-            <section class="bg-white rounded-lg shadow-xl p-8 mt-12">
-                <h2 class="text-4xl font-extrabold text-indigo-800 mb-6 text-center">Additional Open Source Projects with Monetization Potential</h2>
-                <div class="prose max-w-none text-gray-700 leading-relaxed">
-                    <p>Beyond the featured projects, many other open-source initiatives offer diverse paths to monetization. These often involve offering managed services, premium features, consulting, support, or selling related products.</p>
-                    <ul class="list-disc list-inside ml-6 mt-4 space-y-3">
-                        <li>
-                            <strong>Mattermost:</strong> An open-source Slack alternative for team communication.
-                            <ul>
-                                <li><strong>Monetization:</strong> Enterprise editions with advanced features, professional support, and managed cloud offerings.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Odoo:</strong> An all-in-one suite of business management software, including CRM, ERP, accounting, and more.
-                            <ul>
-                                <li><strong>Monetization:</strong> Commercial modules, managed cloud hosting, implementation services, and official support plans.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Metabase:</strong> An open-source business intelligence (BI) tool for data visualization and dashboards.
-                            <ul>
-                                <li><strong>Monetization:</strong> Enterprise features, dedicated support, and managed cloud services.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>N8n:</strong> A workflow automation tool that connects various applications and services.
-                            <ul>
-                                <li><strong>Monetization:</strong> Cloud hosting, enterprise features, and dedicated support.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>AppFlowy:</strong> An open-source alternative to Notion, focused on note-taking, project management, and wikis.
-                            <ul>
-                                <li><strong>Monetization:</strong> Potentially via premium templates, integrations, or a hosted SaaS version in the future.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Flarum:</strong> A simple, modern forum software for building online communities.
-                            <ul>
-                                <li><strong>Monetization:</strong> Premium extensions/plugins, themes, and managed hosting services.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Saltcorn:</strong> An open-source no-code platform for building database web applications.
-                            <ul>
-                                <li><strong>Monetization:</strong> Commercial hosting, premium themes, and professional support/consulting.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Keila:</strong> A privacy-focused open-source email marketing platform.
-                            <ul>
-                                <li><strong>Monetization:</strong> Managed cloud service, advanced analytics, and deliverability consulting.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Taiga:</strong> An open-source agile project management tool with Scrum and Kanban boards.
-                            <ul>
-                                <li><strong>Monetization:</strong> Cloud hosting, enterprise features, and professional services/support.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Gitea / Gogs:</strong> Lightweight self-hosted Git services.
-                            <ul>
-                                <li><strong>Monetization:</strong> Could be offered as a managed hosting service for development teams.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </main>
+<section class="bg-white rounded-lg shadow-xl p-8 mt-12">
+<h2 class="text-4xl font-extrabold text-indigo-800 mb-6 text-center">Additional Open Source Projects with Monetization Potential</h2>
+<div class="prose max-w-none text-gray-700 leading-relaxed">
+<p>Beyond the featured projects, many other open-source initiatives offer diverse paths to monetization. These often involve offering managed services, premium features, consulting, support, or selling related products.</p>
+<ul class="list-disc list-inside ml-6 mt-4 space-y-3">
+<li>
+<strong>Mattermost:</strong> An open-source Slack alternative for team communication.
+<ul>
+<li><strong>Monetization:</strong> Enterprise editions with advanced features, professional support, and managed cloud offerings.</li>
+</ul>
+</li>
+<li>
+<strong>Odoo:</strong> An all-in-one suite of business management software, including CRM, ERP, accounting, and more.
+<ul>
+<li><strong>Monetization:</strong> Commercial modules, managed cloud hosting, implementation services, and official support plans.</li>
+</ul>
+</li>
+<li>
+<strong>Metabase:</strong> An open-source business intelligence (BI) tool for data visualization and dashboards.
+<ul>
+<li><strong>Monetization:</strong> Enterprise features, dedicated support, and managed cloud services.</li>
+</ul>
+</li>
+<li>
+<strong>N8n:</strong> A workflow automation tool that connects various applications and services.
+<ul>
+<li><strong>Monetization:</strong> Cloud hosting, enterprise features, and dedicated support.</li>
+</ul>
+</li>
+<li>
+<strong>AppFlowy:</strong> An open-source alternative to Notion, focused on note-taking, project management, and wikis.
+<ul>
+<li><strong>Monetization:</strong> Potentially via premium templates, integrations, or a hosted SaaS version in the future.</li>
+</ul>
+</li>
+<li>
+<strong>Flarum:</strong> A simple, modern forum software for building online communities.
+<ul>
+<li><strong>Monetization:</strong> Premium extensions/plugins, themes, and managed hosting services.</li>
+</ul>
+</li>
+<li>
+<strong>Saltcorn:</strong> An open-source no-code platform for building database web applications.
+<ul>
+<li><strong>Monetization:</strong> Commercial hosting, premium themes, and professional support/consulting.</li>
+</ul>
+</li>
+<li>
+<strong>Keila:</strong> A privacy-focused open-source email marketing platform.
+<ul>
+<li><strong>Monetization:</strong> Managed cloud service, advanced analytics, and deliverability consulting.</li>
+</ul>
+</li>
+<li>
+<strong>Taiga:</strong> An open-source agile project management tool with Scrum and Kanban boards.
+<ul>
+<li><strong>Monetization:</strong> Cloud hosting, enterprise features, and professional services/support.</li>
+</ul>
+</li>
+<li>
+<strong>Gitea / Gogs:</strong> Lightweight self-hosted Git services.
+<ul>
+<li><strong>Monetization:</strong> Could be offered as a managed hosting service for development teams.</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</main>
 
-        <footer class="bg-gray-800 text-white p-6 text-center mt-12">
-            <p>&copy; 2025 ChromeDevStack.</p>
-        </footer>
-    </div>
+<footer class="bg-gray-800 text-white p-6 text-center mt-12">
+<p>&copy; 2025 ChromeDevStack.</p>
+</footer>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const loadingScreen = document.getElementById('loading-screen');
-            const donationScreen = document.getElementById('donation-screen');
-            const mainContent = document.getElementById('main-content');
-            const freeAccessButton = document.getElementById('free-access-button');
-            const accessButtons = document.querySelectorAll('.access-button[data-type="donate"]');
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+const loadingScreen = document.getElementById('loading-screen');
+const donationScreen = document.getElementById('donation-screen');
+const mainContent = document.getElementById('main-content');
+const freeAccessButton = document.getElementById('free-access-button');
+const accessButtons = document.querySelectorAll('.access-button[data-type="donate"]');
 
-            // Simulate loading
-            setTimeout(() => {
-                loadingScreen.style.opacity = '0';
-                loadingScreen.addEventListener('transitionend', () => {
-                    loadingScreen.remove(); // Use remove() instead of add('hidden') for cleaner DOM
-                    donationScreen.classList.remove('hidden');
+// Simulate loading
+setTimeout(() => {
+loadingScreen.style.opacity = '0';
+loadingScreen.addEventListener('transitionend', () => {
+loadingScreen.remove(); // Use remove() instead of add('hidden') for cleaner DOM
+donationScreen.classList.remove('hidden');
                     // Trigger the fade-in and scale-up for the donation screen
-                    setTimeout(() => {
+setTimeout(() => {
+                        // Ensure the donation screen content becomes visible
+                        donationScreen.querySelector('.bg-white').style.transform = 'scale(1)';
+                        donationScreen.querySelector('.bg-white').style.opacity = '1';
+                    }, 50); // Small delay for the pop-in effect
+                }, { once: true });
                         donationScreen.querySelector('.bg-white').classList.remove('scale-95', 'opacity-0');
                         donationScreen.querySelector('.bg-white').classList.add('scale-100', 'opacity-100');
                     }, 50); // Small delay to ensure hidden is processed
                 });
-            }, 2000); // Adjust loading time as needed
+}, 2000); // Adjust loading time as needed
 
-            const grantAccess = () => {
+const grantAccess = () => {
+                donationScreen.querySelector('.bg-white').style.transform = 'scale(0.95)';
+                donationScreen.querySelector('.bg-white').style.opacity = '0';
                 // Fade out donation screen
                 donationScreen.querySelector('.bg-white').classList.remove('scale-100', 'opacity-100');
                 donationScreen.querySelector('.bg-white').classList.add('scale-95', 'opacity-0');
-                donationScreen.addEventListener('transitionend', () => {
-                    donationScreen.classList.add('hidden');
+donationScreen.addEventListener('transitionend', () => {
+donationScreen.classList.add('hidden');
                     // Show main content
-                    mainContent.classList.remove('hidden');
-                    setTimeout(() => {
-                        mainContent.style.opacity = '1';
+mainContent.classList.remove('hidden');
+setTimeout(() => {
+mainContent.style.opacity = '1';
+                    }, 50); // Small delay for the fade-in effect
+                }, { once: true });
                     }, 50); // Small delay for opacity transition
                 }, { once: true }); // Ensure this listener only runs once
-            };
+};
 
+            // Event listener for "Free Access" button
+            freeAccessButton.addEventListener('click', () => {
+                grantAccess();
             freeAccessButton.addEventListener('click', grantAccess);
 
             accessButtons.forEach(button => {
@@ -449,7 +461,7 @@
                     console.log(`Simulating donation via: ${paypalLink}`);
                     grantAccess();
                 });
-            });
+});
         });
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -489,18 +501,23 @@
 
             freeAccessButton.addEventListener('click', grantAccess);
 
-            accessButtons.forEach(button => {
+            // Event listeners for donation buttons
+accessButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const paypalLink = button.dataset.paypalLink;
+                    if (paypalLink) {
+                        window.open(paypalLink, '_blank'); // Open PayPal link in a new tab
+                    }
+                    grantAccess(); // Immediately grant access after clicking a donation button
                 button.addEventListener('click', (event) => {
                     const paypalLink = event.currentTarget.dataset.paypalLink;
                     // In a real scenario, you would redirect to PayPal here.
                     // For this demo, we just grant access.
                     console.log(`Simulating donation via: ${paypalLink}`);
                     grantAccess();
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+});
+});
+});
+</script>
 </body>
 </html>
